@@ -28,10 +28,23 @@ Look through the application code. If you have the old Lambda Times (Applied Jav
 
 ## Self-Study/Essay Questions
 
-- [ ] What are PropTypes used for? Please describe why it's important to type check our data in JavaScript.
-- [ ] Describe a life-cycle event in React?
-- [ ] Explain the details of a Higher Order Component?
-- [ ] What are three different ways to style components in React? Explain some of the benefits of each.
+- [x] What are PropTypes used for? Please describe why it's important to type check our data in JavaScript.
+
+- PropTypes is an npm package used in React project to check and validate the type of data passed to components as props. JavaScript is loosely-typed language, which means that a variable can get assigned/reassigned severally with values of different data types (eg. Number, String or Function) throughout a program execution time. Type-checking the values passed to/as variables/props become utmost important to make sure that the value passed is within the acceptable data range. For example, it wouldn't make any sense to pass a string of alphabets or a letter as a user's age via variable/props.
+
+- [x] Describe a life-cycle event in React?
+
+- The React componentDidUpdate lifecycle event is an event fired when there's a change in the application's state which will cause the affected components to re-render(or be re-mount into the DOM). Handling this event helps software developers to perform more or additional operations, like updating the browser's local storage with the change made to the application's state data.
+
+- [x] Explain the details of a Higher Order Component?
+
+- A Higher Order Component takes in a component as an argument and returns an anonymous component. This anonymous component could be an enriched version of the component passed as an argument, or conditionally rendering the passed component.
+
+- [x] What are three different ways to style components in React? Explain some of the benefits of each.
+
+- Using Style objects (Inline styling):- this is very useful in overriding other existing styles (CSS Specificity)
+- Importing external CSS files and use of classNames prop on components:- This is more secure and maintainable compared to the inline styling.
+- Creating and using styled components:- This makes the codebase cleaner, more maintainable and scalable.
 
 ## Project Setup
 
