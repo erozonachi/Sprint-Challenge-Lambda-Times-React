@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import CarouselBox from './StyledComponents/Carousel';
-import { carouselData, cardData } from '../../data';
+import { carouselData,} from '../../data';
 // Complete this Carousel 
 export default class Carousel extends Component {
   constructor(props){
@@ -13,7 +13,6 @@ export default class Carousel extends Component {
   componentDidMount(){
     this.setState({
       images: carouselData,
-      selected: cardData[0],
     });
   }
 

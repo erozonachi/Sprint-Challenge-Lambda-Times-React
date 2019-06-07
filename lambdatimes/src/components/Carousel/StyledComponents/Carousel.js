@@ -42,7 +42,7 @@ const Carousel = styled.div`
       left: 25px;
       transform: translate(0, -50%);
     }
-    &:first-of-type {
+    &:last-of-type {
       top: 50%;
       right: 25px;
       transform: translate(0, -50%);
