@@ -1,4 +1,5 @@
 import React from 'react';
+import TabItem from './StyledComponents/TabItem';
 import PropTypes from 'prop-types';
 
 const Tab = props => {
@@ -9,12 +10,12 @@ const Tab = props => {
     props.selectTabHandler(props.tab);
   };
   return (
-    <div
-      className={props.selectedTab === props.tab? 'tab active-tab' : 'tab'}
+    <TabItem
+      active={props.selectedTab === props.tab? true : false}
       onClick={selectTab}
     >
       {props.tab.toUpperCase()}
-    </div>
+    </TabItem>
   );
 };
 
