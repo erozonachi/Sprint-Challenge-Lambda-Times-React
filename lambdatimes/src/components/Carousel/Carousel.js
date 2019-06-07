@@ -1,20 +1,26 @@
 import React, { Component } from 'react';
 import CarouselBox from './StyledComponents/Carousel';
-import { carouselData } from '../../data';
+import { carouselData, cardData } from '../../data';
 // Complete this Carousel 
 export default class Carousel extends Component {
   constructor(props){
     super(props);
     this.state = {
       images: [],
+      selected: 0,
     }
   }
   componentDidMount(){
-    this.setState({images: carouselData});
+    this.setState({
+      images: carouselData,
+      selected: cardData[0],
+    });
   }
 
   leftClick = () => {
-
+    if (this.state.selected < (this.state.images.length - 1)) {
+      this.setState(prevState => ({selected: prevState.selected + 1}));
+    }
   }
 
   rightClick = () => {
