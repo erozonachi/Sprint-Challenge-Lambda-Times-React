@@ -8,6 +8,7 @@ const Cards = props => {
     <CardsContainer>
       {
         props.cards.map(card => <Card 
+          key={card.headline}
           headline={card.headline} 
           img={card.img} 
           author={card.author}
