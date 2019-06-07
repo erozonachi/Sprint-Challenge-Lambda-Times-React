@@ -18,13 +18,15 @@ export default class Carousel extends Component {
   }
 
   leftClick = () => {
-    if (this.state.selected < (this.state.images.length - 1)) {
-      this.setState(prevState => ({selected: prevState.selected + 1}));
+    if (this.state.selected > 0) {
+      this.setState(prevState => ({selected: prevState.selected - 1}));
     }
   }
 
   rightClick = () => {
-
+    if (this.state.selected < (this.state.images.length - 1)) {
+      this.setState(prevState => ({selected: prevState.selected + 1}));
+    }
   }
 
   selectedImage = () => {
