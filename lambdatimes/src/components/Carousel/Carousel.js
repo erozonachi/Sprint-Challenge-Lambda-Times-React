@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { carouselData } from '../../data'
+import CarouselBox from './StyledComponents/Carousel';
+import { carouselData } from '../../data';
 // Complete this Carousel 
 export default class Carousel extends Component {
   constructor(props){
@@ -26,10 +27,10 @@ export default class Carousel extends Component {
   
   render(){
     return (
-      <div className="carousel">
-        <div className="left-button" onClick={this.leftClick}>{"<"}</div>
-        <div className="right-button" onClick={this.rightClick}>{">"}</div>
-      </div>
+      <CarouselBox>
+        <div onClick={this.leftClick}>{"<"}</div>
+        <div onClick={this.rightClick}>{">"}</div>
+      </CarouselBox>
     )
   }
 }
