@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import Card from './Card';
+import CardsContainer from './StyledComponents/CardsContainer';
 import PropTypes from 'prop-types';
 
 const Cards = props => {
   return (
-    <div className="cards-container">
+    <CardsContainer>
       {
         props.cards.map(card => <Card 
           headline={card.headline} 
@@ -13,7 +14,7 @@ const Cards = props => {
           tab={card.tab}
         />)
       }
-    </div>
+    </CardsContainer>
   )
 }
 
