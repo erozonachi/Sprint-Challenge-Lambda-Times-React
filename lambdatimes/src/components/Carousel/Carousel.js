@@ -38,6 +38,7 @@ export default class Carousel extends Component {
       <CarouselBox>
         <div onClick={this.leftClick}>{"<"}</div>
         <div onClick={this.rightClick}>{">"}</div>
+        {this.selectedImage()}
       </CarouselBox>
     )
   }
